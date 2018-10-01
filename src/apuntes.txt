@@ -1,0 +1,55 @@
+--- CICLO DE VIDA DE UNCOMPONENTE DE REACT ---
+* Constructor 
+    Metodo llamado antes de que el componente sea montado (el componente aun no se ve)
+    Aqui podemos INICIALIZAR EL ESTADO, enlazar BIND de eventos, 
+    Es el primer metodo que se llama al instancia el componente
+
+* componentWillMount
+    Metodo que se llama inmediatamente antes de que el componente se vaya a montar
+    (el componente aun no se ve)
+    Aqui podemos hacer el SetState()
+    No hacer llamadas a API o una subscripcion a eventos.
+
+* render
+    Contiene todos los elementos a renderizar (estructura del componente)
+    Contiene el JSX en el return 
+    Puede calcular propiedades: nComponent = val1 + val2;
+
+* componentDidMount
+    Método llamado luego de montarse el componente (el componente ya esta en la pantalla)
+    Solo se lanza una vez
+    Enlazar bind de eventos
+    Es el primer metodo que se llama al instancia un componente
+    Aqui hacer llamadasa  las API
+
+-- Actualización del componente
+
+* componentWillReceiveProps
+    Metodo llamado al recibir nuevas propiedades
+    Siver para actualizar el estado con base a las nuevas propiedades.
+
+* shouldComponentUpdate
+    Metodo que condiciona si el componente se vuelve a renderizar
+    Utilizado para optimizar el rendimiento.
+
+* componenteWillUpdate
+    Método llamado antes de re-renderizar un componente
+    Utilizado para optimizar el rendimiento.
+
+* render
+    re-render
+
+* componentDidUpdate
+    Metodo llamado luego del re-render
+
+-- Desmontado del componente
+
+* componentWillUnmount
+    Metodo llamado antes que el componente sea retirado de la aplicación
+
+----- MANEJO DE ERRORES REACT 6 -------
+    Prevenir que los errores quiebren la aplicación
+
+* componentDidCatch
+    Sí ocurre algún error al renderizar algún componente este metodo es invocado.
+    El manejo de errores solo ocurre en componentes hijos.
