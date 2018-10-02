@@ -23,7 +23,7 @@ class Media extends Component {
             src={cover}
             className="Media-image"
             alt={title}
-            width="260"
+            width="230"
             height="160"
           />
         </div>
