@@ -53,3 +53,8 @@
 * componentDidCatch
     Sí ocurre algún error al renderizar algún componente este metodo es invocado.
     El manejo de errores solo ocurre en componentes hijos.
+
+
+    =============================>  TIPOS DE COMPONENTES  <==============================
+    * Componentes normales, los que usan clases
+    * PureComponents 
