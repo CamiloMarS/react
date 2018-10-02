@@ -15,12 +15,12 @@ class Media extends Component {
   //Metodo de render
   render() {
     //Obtener los valor que nos pasen
-    let { image, title } = this.props;
+    let { cover, title } = this.props;
     return (
       <div className="Media" onClick={this.handleClick}>
         <div className="Media-cover">
           <img
-            src={image}
+            src={cover}
             className="Media-image"
             alt={title}
             width="260"
@@ -36,7 +36,7 @@ class Media extends Component {
 
 //Asignar los tipos de datos de las props para validar correctamente
 Media.propTypes = {
-  image: PropTypes.string,
+  cover: PropTypes.string,
   title: PropTypes.string.isRequired,
   author: PropTypes.string,
   type: PropTypes.oneOf(["video", "audio"])
