@@ -56,5 +56,33 @@
 
 
     =============================>  TIPOS DE COMPONENTES  <==============================
-    * Componentes normales, los que usan clases
+    * Componentes normales
+
     * PureComponents 
+        {PureComponent } from 'reac';
+        shouldComponentUpdate --> Valida las propiedades, para mejorar el rendimiento 
+
+    * Functionally Component 
+        No tiene ciclo de vida
+
+    ¿Cómo usar uno y cuando otro?
+        * "Como se ve" ---> Son los componentes tontos, o presentacional.
+            1.- puede contener smart componentes u otros componentes de UI.
+            2.- permite composicion con props.children "poner componentes dentro de otro"
+            3.- No dependen del resto de la app.
+            4.- No específica como los datos son cargados o mutado
+            5.- Recibe datos y callbacks solo con propiedades
+            6.- Rara vez tiene su propio estado
+            7.- Están escritos como componentes funcionales a menos que necesiten mejoras de performance. 
+
+        * "Qué hace?"  ---> Son los componentes inteligentes, llamados Smart
+            Containers 
+                1.- Concentrado en el funcionamiento de la aplicación
+                2.- Contienen componentes de UI u otros containers
+                3.- No tienen estilos
+                4.- Proveen de datos a componentes de UI u otros contenedores
+                5.- Proveen de callbacks  a la UI
+                6.- Normalmente tienen "estado"
+                7.- Llaman acciones
+                8.- Generados por higher order componentes
+                
